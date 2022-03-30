@@ -5,5 +5,5 @@ public interface IJavaScriptOperations {
 
 	public void scrollDown(int x, int y) throws Exception;
 
-	public void executeJavaScriptWithReturnValue(String scriptToExecute) throws Exception;
+	public String executeJavaScriptWithReturnValue(String scriptToExecute) throws Exception;
 }
