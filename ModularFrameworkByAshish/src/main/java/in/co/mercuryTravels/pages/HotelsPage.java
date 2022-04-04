@@ -1,5 +1,11 @@
 package in.co.mercuryTravels.pages;
 
-public class HotelsPage {
+import org.openqa.selenium.WebDriver;
+
+public class HotelsPage extends BasePage{
+
+	public HotelsPage(WebDriver driver) {
+		super(driver);
+	}
 
 }
