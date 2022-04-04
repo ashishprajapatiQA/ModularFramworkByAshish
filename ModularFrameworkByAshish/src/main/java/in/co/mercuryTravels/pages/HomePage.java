@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class HomePage extends BasePage {
 	@FindBy(linkText = "International Holidays")
 	private WebElement internationalHolidayLink;
 
@@ -34,7 +34,17 @@ public class HomePage {
 	private WebElement userButton;
 
 	public HomePage(WebDriver driver) {
+		super(driver);
 		PageFactory.initElements(driver, this);
+	}
+
+	public void userLogin(String username, String password) throws Exception {
+
+		mouseControl.moveTOElement(customerLogin);
+		mouseControl.moveTOElementAndClick(userLogin);
+		elementControl.setText(signUserEmailId, username);
+		elementControl.setText(signUserPassword, password);
+		elementControl.clickElement(userButton);
 	}
 
 }
