@@ -10,6 +10,9 @@ import commonLibs.implementation.MouseControl;
 
 public class BasePage {
 
+	// this is base class which define object & initialize
+	// so we just extend this to all other class (reusing code via extends)
+	
 	protected AlertControl alertControl;
 	protected CommonElement elementControl;
 	protected DropdownControl dropdownControl;

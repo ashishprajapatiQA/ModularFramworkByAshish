@@ -34,12 +34,13 @@ public class HomePage extends BasePage {
 	private WebElement userButton;
 
 	public HomePage(WebDriver driver) {
-		super(driver);
+		super(driver); // make it super due to basePage class have also same parameterized constructor overloaded  
 		PageFactory.initElements(driver, this);
 	}
 
 	public void userLogin(String username, String password) throws Exception {
-
+        // this is logic layer for login functionality        
+		// pass element to controls which we created
 		mouseControl.moveTOElement(customerLogin);
 		mouseControl.moveTOElementAndClick(userLogin);
 		elementControl.setText(signUserEmailId, username);
