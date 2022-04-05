@@ -9,7 +9,7 @@ import in.co.mercuryTravels.pages.HomePage;
 
 public class BaseTest {
 	
-	// Initialize home page 
+	// Initialize home page like basic thing driver, url,browser type , open/close browser  
 	
 	CommonDriver cmnDriver;
 	String browserType = "chrome";

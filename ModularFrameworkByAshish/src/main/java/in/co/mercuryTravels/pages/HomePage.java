@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage {
+	// Logic layer   - what we perform step by step 
+	
 	@FindBy(linkText = "International Holidays")
 	private WebElement internationalHolidayLink;
 
@@ -40,7 +42,7 @@ public class HomePage extends BasePage {
 
 	public void userLogin(String username, String password) throws Exception {
         // this is logic layer for login functionality        
-		// pass element to controls which we created
+		// pass values to element to controls which we created to perform
 		mouseControl.moveTOElement(customerLogin);
 		mouseControl.moveTOElementAndClick(userLogin);
 		elementControl.setText(signUserEmailId, username);
