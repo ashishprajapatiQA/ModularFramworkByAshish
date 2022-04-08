@@ -21,9 +21,11 @@ public class BaseTest {
 	public void invokeBrowser() throws Exception {
 		cmnDriver = new CommonDriver(browserType);
 		cmnDriver.setPageloadTimeout(60);
-		cmnDriver.setElementDetectionTimeout(20);
+		cmnDriver.setElementDetectionTimeout(1000000);
 		cmnDriver.navigateToUrl(url);
+		driver = cmnDriver.getDriver();
 		homePage = new HomePage(driver);
+		homePage.closeInitialButton();
 	}
 
 	@AfterClass

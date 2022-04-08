@@ -1,5 +1,7 @@
 package commonLibs.implementation;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 
 import commonLibs.contracts.ICommonElement;
@@ -51,7 +53,7 @@ public class CommonElement implements ICommonElement {
 
 	@Override
 	public void setText(WebElement element, String textToWrite) throws Exception {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub		
 		element.sendKeys(textToWrite);
 	}
 

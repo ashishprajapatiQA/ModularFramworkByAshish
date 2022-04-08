@@ -46,7 +46,7 @@ public class CommonDriver implements IDriver {
 		this.pageloadTimeout = pageloadTimeout;
 	}
 
-	public void setElementDetectionTimeout(int elementDetectionTimeout) {
+	public void setElementDetectionTimeout(int elementDetectionTimeout) throws Exception {
 		this.elementDetectionTimeout = elementDetectionTimeout;
 	}
 
