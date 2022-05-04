@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import commonLibs.utils.WaitUtils;
+
 public class HomePage extends BasePage {
 	// Logic layer - what we perform step by step
 
@@ -26,13 +28,13 @@ public class HomePage extends BasePage {
 	@FindBy(linkText = "Register")
 	private WebElement register;
 
-	@FindBy(id = "sign_user_email")   
+	@FindBy(id = "sign_user_email")
 	private WebElement signUserEmailId;
 
 	@FindBy(id = "sign_user_password")
 	private WebElement signUserPassword;
 
-	@FindBy(xpath = "//button[text() ='Log in']") 
+	@FindBy(xpath = "//button[text() ='Log in']")
 	private WebElement userButton;
 
 	@FindBy(xpath = "/html/body/div[1]/div/a")
@@ -52,9 +54,10 @@ public class HomePage extends BasePage {
 		// this is logic layer for login functionality
 		// pass values to element to controls which we created to perform
 		mouseControl.moveTOElement(customerLogin);
-		mouseControl.moveTOElementAndClick(userLogin);	
-		Thread.sleep(100);
+		mouseControl.moveTOElementAndClick(userLogin);
+		WaitUtils.waitForSeconds(1);
 		elementControl.setText(signUserEmailId, username);
+		WaitUtils.waitForSeconds(1);
 		elementControl.setText(signUserPassword, password);
 		elementControl.clickElement(userButton);
 	}

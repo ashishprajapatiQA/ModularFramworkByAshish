@@ -6,6 +6,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtils {
+	public static void waitForSeconds(int timeOutSeconds) throws Exception{
+		Thread.sleep(timeOutSeconds * 1000);
+	}
+	
 	public static void waitTillAlertIsPresent(WebDriver driver, int timeoutInSeconds) throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
 		wait.until(ExpectedConditions.alertIsPresent());
