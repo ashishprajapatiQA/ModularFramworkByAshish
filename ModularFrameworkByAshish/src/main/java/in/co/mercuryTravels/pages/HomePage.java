@@ -39,7 +39,11 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "/html/body/div[1]/div/a")
 	private WebElement closeInitialModalButton;
+	
+	@FindBy(partialLinkText = "Welcome,")
+	private WebElement welcomeText;
 
+	
 	public HomePage(WebDriver driver) {
 		super(driver); // make it super due to basePage class have also same parameterized constructor
 						// overloaded
@@ -60,6 +64,11 @@ public class HomePage extends BasePage {
 		WaitUtils.waitForSeconds(1);
 		elementControl.setText(signUserPassword, password);
 		elementControl.clickElement(userButton);
+	}
+	
+	public String getWelcomeMessage() throws Exception{
+		WaitUtils.waitForSeconds(1);
+		return elementControl.getText(welcomeText);
 	}
 
 }

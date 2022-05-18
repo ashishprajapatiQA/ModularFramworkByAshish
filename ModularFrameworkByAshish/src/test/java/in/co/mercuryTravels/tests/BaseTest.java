@@ -16,14 +16,22 @@ public class BaseTest {
 	
 	CommonDriver cmnDriver;
 	String browserType;
-	String url = "https://www.mercurytravels.co.in/";
+	String baseUrl;
 	HomePage homePage;
 	private WebDriver driver;
 	
 	static String configFileName;
 	static Properties configProperties;
+	static String currentWorkingDirectory;
+	
+	int pageloadtimeout;
+	int elementDetectionTimeout;
 	static {
+		
+	
 		try {
+			currentWorkingDirectory = System.getProperty("user.dir");
+			configFileName =  String.format("%s/config/config.properties",currentWorkingDirectory);
 			configProperties = ConfigFileUtils.readProperties(configFileName);
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -36,9 +44,14 @@ public class BaseTest {
 	public void invokeBrowser() throws Exception {
 		browserType = configProperties.getProperty("browserType");
 		cmnDriver = new CommonDriver(browserType);
-		cmnDriver.setPageloadTimeout(60);
-		cmnDriver.setElementDetectionTimeout(1000000);
-		cmnDriver.navigateToUrl(url);
+		
+		pageloadtimeout = Integer.parseInt(configProperties.getProperty("pageloadTimeout"));
+		elementDetectionTimeout = Integer.parseInt(configProperties.getProperty("elementDetectionTimeout"));
+		cmnDriver.setPageloadTimeout(pageloadtimeout);		
+		cmnDriver.setElementDetectionTimeout(elementDetectionTimeout);
+		
+		baseUrl = configProperties.getProperty("baseUrl");
+		cmnDriver.navigateToUrl(baseUrl);
 		driver = cmnDriver.getDriver();
 		homePage = new HomePage(driver);
 		homePage.closeInitialButton();

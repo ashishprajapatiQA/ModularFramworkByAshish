@@ -1,5 +1,6 @@
 package in.co.mercuryTravels.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class MercuryTravelTestcases extends BaseTest{
@@ -7,9 +8,12 @@ public class MercuryTravelTestcases extends BaseTest{
 
 	@Test
 	public void verifyUserLoginWithCorrectCredential() throws Exception{
-		String username = "saurabh.d2106@gmail.com";
-		String password = "Pro@1234";
+		String username = configProperties.getProperty("userEmailId");
+		String password = configProperties.getProperty("userPassword");
         homePage.userLogin(username,password);// this pass value to logic layer page
+        String expectedWelcomeText = configProperties.getProperty("expectedWelcomeText");
+        String actualWelcomeText = homePage.getWelcomeMessage();
+        Assert.assertEquals(actualWelcomeText, expectedWelcomeText);
 	}
 
 }
