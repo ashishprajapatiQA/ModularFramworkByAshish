@@ -2,28 +2,39 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-19T11:56:48 IST" name="Default suite" finished-at="2022-05-19T11:57:05 IST" duration-ms="17357">
+  <suite started-at="2022-05-19T16:19:26 IST" name="Default suite" finished-at="2022-05-19T16:19:36 IST" duration-ms="9663">
     <groups>
     </groups>
-    <test started-at="2022-05-19T11:56:48 IST" name="Default test" finished-at="2022-05-19T11:57:05 IST" duration-ms="17357">
+    <test started-at="2022-05-19T16:19:26 IST" name="Default test" finished-at="2022-05-19T16:19:36 IST" duration-ms="9663">
       <class name="in.co.mercuryTravels.tests.MercuryTravelTestcases">
-        <test-method is-config="true" signature="preSetup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:56:47 IST" name="preSetup" finished-at="2022-05-19T11:56:48 IST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:26 IST" name="preSetup" finished-at="2022-05-19T16:19:26 IST" duration-ms="187" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preSetup -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:56:48 IST" name="setup" finished-at="2022-05-19T11:57:00 IST" duration-ms="12294" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:26 IST" name="setup" finished-at="2022-05-19T16:19:31 IST" duration-ms="4569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyUserLoginWithCorrectCredential()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:00 IST" name="verifyUserLoginWithCorrectCredential" finished-at="2022-05-19T11:57:04 IST" duration-ms="3838" status="PASS">
+        <test-method signature="verifyUserLoginWithCorrectCredential()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:31 IST" name="verifyUserLoginWithCorrectCredential" finished-at="2022-05-19T16:19:35 IST" duration-ms="3825" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithCorrectCredential -->
-        <test-method is-config="true" signature="cleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:04 IST" name="cleanUp" finished-at="2022-05-19T11:57:05 IST" duration-ms="1187" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:35 IST" name="afterMethod" finished-at="2022-05-19T16:19:36 IST" duration-ms="1072" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUserLoginWithCorrectCredential status=SUCCESS method=MercuryTravelTestcases.verifyUserLoginWithCorrectCredential()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:36 IST" name="cleanUp" finished-at="2022-05-19T16:19:36 IST" duration-ms="159" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:05 IST" name="postCleanUp" finished-at="2022-05-19T11:57:05 IST" duration-ms="306" status="PASS">
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6da21078]" started-at="2022-05-19T16:19:36 IST" name="postCleanUp" finished-at="2022-05-19T16:19:36 IST" duration-ms="308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCleanUp -->

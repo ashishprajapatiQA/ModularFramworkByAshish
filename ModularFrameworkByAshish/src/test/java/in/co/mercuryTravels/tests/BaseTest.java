@@ -3,7 +3,9 @@ package in.co.mercuryTravels.tests;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -14,6 +16,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 import commonLibs.implementation.CommonDriver;
+import commonLibs.implementation.ScreenshotControl;
 import commonLibs.utils.ConfigFileUtils;
 import commonLibs.utils.DateUtils;
 import in.co.mercuryTravels.pages.HomePage;
@@ -21,6 +24,7 @@ import in.co.mercuryTravels.pages.HomePage;
 public class BaseTest {
 
 	// Initialize home page like basic thing driver, url,browser type , open/close
+	//(everytime je basic details repeat karvani hoy te ) 
 	// browser
 
 	CommonDriver cmnDriver;
@@ -44,10 +48,14 @@ public class BaseTest {
 	ExtentTest extentTest;
 
 	String reportFilename;
+	
+	String screenshotFilename;
+	ScreenshotControl screenshotControl;
 
 	static {
 
 		try {
+			//configuration file access code
 			currentWorkingDirectory = System.getProperty("user.dir");
 			executionStartDate = DateUtils.getCurrentDateAndTime();
 			configFileName = String.format("%s/config/config.properties", currentWorkingDirectory);
@@ -60,6 +68,7 @@ public class BaseTest {
 
 	@BeforeSuite
 	public void preSetup() {
+		//report code
 		reportFilename = String.format("%s/reports/MercuryTravelTestReport-%s.html", currentWorkingDirectory,
 				executionStartDate);
 		htmlReporter = new ExtentHtmlReporter(reportFilename);
@@ -88,6 +97,8 @@ public class BaseTest {
 		driver = cmnDriver.getDriver();
 		extentTest.log(Status.INFO, "Initializing all pages"); // report log
 		homePage = new HomePage(driver);
+		
+		screenshotControl = new ScreenshotControl(driver); //  we need driver instance for it so we declare here
 		homePage.closeInitialButton();
 	}
 
@@ -103,4 +114,24 @@ public class BaseTest {
 		extent.flush();
 	}
 
+	@AfterMethod
+	public void afterMethod(ITestResult result) throws Exception {
+		String testcaseName = result.getName();
+		
+		String screenShoFilename = String .format("%s/screenshot/%s-%s.jpeg",currentWorkingDirectory,testcaseName,executionStartDate);
+		
+		if(result.getStatus() == ITestResult.SUCCESS) {
+			extentTest.log(Status.PASS, "Test case pass " + testcaseName);
+			screenshotControl.captureAndSaveScreenshot(screenShoFilename);
+			extentTest.addScreenCaptureFromPath(screenShoFilename);
+		}else if(result.getStatus() == ITestResult.FAILURE) {
+			extentTest.log(Status.FAIL, "Test case fail " + testcaseName);
+			screenshotControl.captureAndSaveScreenshot(screenShoFilename);
+			extentTest.addScreenCaptureFromPath(screenShoFilename);
+		}else {
+			extentTest.log(Status.SKIP, "Test case skipped " + testcaseName);
+			screenshotControl.captureAndSaveScreenshot(screenShoFilename);
+			extentTest.addScreenCaptureFromPath(screenShoFilename);
+		}
+	}
 }

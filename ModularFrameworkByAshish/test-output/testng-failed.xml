@@ -5,9 +5,12 @@
     <classes>
       <class name="in.co.mercuryTravels.tests.MercuryTravelTestcases">
         <methods>
-          <include name="invokeBrowser"/>
+          <include name="preSetup"/>
+          <include name="afterMethod"/>
+          <include name="setup"/>
+          <include name="cleanUp"/>
           <include name="verifyUserLoginWithCorrectCredential"/>
-          <include name="closeBrowser"/>
+          <include name="postCleanUp"/>
         </methods>
       </class> <!-- in.co.mercuryTravels.tests.MercuryTravelTestcases -->
     </classes>
