@@ -2,23 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-18T16:24:19 IST" name="Default suite" finished-at="2022-05-18T16:24:28 IST" duration-ms="9864">
+  <suite started-at="2022-05-19T11:56:48 IST" name="Default suite" finished-at="2022-05-19T11:57:05 IST" duration-ms="17357">
     <groups>
     </groups>
-    <test started-at="2022-05-18T16:24:19 IST" name="Default test" finished-at="2022-05-18T16:24:28 IST" duration-ms="9864">
+    <test started-at="2022-05-19T11:56:48 IST" name="Default test" finished-at="2022-05-19T11:57:05 IST" duration-ms="17357">
       <class name="in.co.mercuryTravels.tests.MercuryTravelTestcases">
-        <test-method is-config="true" signature="invokeBrowser()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6631f5ca]" started-at="2022-05-18T16:24:19 IST" name="invokeBrowser" finished-at="2022-05-18T16:24:23 IST" duration-ms="4808" status="PASS">
+        <test-method is-config="true" signature="preSetup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:56:47 IST" name="preSetup" finished-at="2022-05-19T11:56:48 IST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invokeBrowser -->
-        <test-method signature="verifyUserLoginWithCorrectCredential()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6631f5ca]" started-at="2022-05-18T16:24:23 IST" name="verifyUserLoginWithCorrectCredential" finished-at="2022-05-18T16:24:27 IST" duration-ms="3829" status="PASS">
+        </test-method> <!-- preSetup -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:56:48 IST" name="setup" finished-at="2022-05-19T11:57:00 IST" duration-ms="12294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLoginWithCorrectCredential()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:00 IST" name="verifyUserLoginWithCorrectCredential" finished-at="2022-05-19T11:57:04 IST" duration-ms="3838" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithCorrectCredential -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@6631f5ca]" started-at="2022-05-18T16:24:27 IST" name="closeBrowser" finished-at="2022-05-18T16:24:28 IST" duration-ms="1189" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:04 IST" name="cleanUp" finished-at="2022-05-19T11:57:05 IST" duration-ms="1187" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="postCleanUp()[pri:0, instance:in.co.mercuryTravels.tests.MercuryTravelTestcases@3232a28a]" started-at="2022-05-19T11:57:05 IST" name="postCleanUp" finished-at="2022-05-19T11:57:05 IST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- postCleanUp -->
       </class> <!-- in.co.mercuryTravels.tests.MercuryTravelTestcases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
