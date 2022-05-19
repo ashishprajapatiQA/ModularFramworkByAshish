@@ -24,7 +24,7 @@ import in.co.mercuryTravels.pages.HomePage;
 public class BaseTest {
 
 	// Initialize home page like basic thing driver, url,browser type , open/close
-	//(everytime je basic details repeat karvani hoy te ) 
+	//(everytime je basic details repeat/reuse/required  karvani hoy te ) 
 	// browser
 
 	CommonDriver cmnDriver;
