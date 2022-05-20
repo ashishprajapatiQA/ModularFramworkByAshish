@@ -12,6 +12,7 @@ public class MercuryTravelTestcases extends BaseTest{
 	public void verifyUserLoginWithCorrectCredential() throws Exception{
 		//TC001 
 		extentTest = extent.createTest("TC-001 - verify Userlogin with correct credentials");
+		extentTest.log(Status.INFO, "Start Testcase - TC-001 - verify Userlogin with correct credentials "); // report log
 		
 		String username = configProperties.getProperty("userEmailId");
 		extentTest.log(Status.INFO, "User Email-id -" + username);
